@@ -1,0 +1,151 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+// Auto generate separate CSS without @media queries for IE7/8
+// https://github.com/sass/sass/issues/408 Chris Eptstein
+// Re-authored by Seongmin
+$media-queries: true !default;
+$is-ie7: false !default;
+
+// @media equivalent
+@mixin respond($param-width, $max-width-flag: false) {
+	@if $media-queries {
+		@if $max-width-flag {
+			@media (max-width: $param-width){
+				@content;
+			}
+		}
+		@else {
+			@media (min-width: $param-width){
+				@content;
+			}
+		}
+	}
+	@else {
+		@if $max-width-flag{}
+		@else {
+			@if $param-width < $fixedWidthThreshold {
+				@content;
+			}
+		}
+	}
+}
+@mixin respond-between($pMinWidth, $pMaxWidth){
+	@if $media-queries{
+		@media (min-width: $pMinWidth) and (max-width: $pMaxWidth){
+			@content;
+		}
+	}
+	@else {
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
+			@content;
+		}
+	}
+}
+
+// @media screen equivalent
+@mixin respond-screen($param-width, $max-width-flag: false) {
+	@if $media-queries {
+		@if $max-width-flag {
+			@media screen and (max-width: $param-width){
+				@content;
+			}
+		}
+		@else {
+			@media screen and (min-width: $param-width){
+				@content;
+			}
+		}
+	}
+	@else {
+		@if $max-width-flag{}
+		@else {
+			@if $param-width < $fixedWidthThreshold {
+				@content;
+			}
+		}
+	}
+}
+@mixin respond-screen-between($pMinWidth, $pMaxWidth){
+	@if $media-queries{
+		@media screen and (min-width: $pMinWidth) and (max-width: $pMaxWidth){
+			@content;
+		}
+	}
+	@else {
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
+			@content;
+		}
+	}
+}
+// @media only screen equivalent
+@mixin respond-only-screen($param-width, $max-width-flag: false) {
+	@if $media-queries {
+		@if $max-width-flag {
+			@media only screen and (max-width: $param-width){
+				@content;
+			}
+		}
+		@else {
+			@media only screen and (min-width: $param-width){
+				@content;
+			}
+		}
+	}
+	@else {
+		@if $max-width-flag{}
+		@else {
+			@if $param-width < $fixedWidthThreshold {
+				@content;
+			}
+		}
+	}
+}
+@mixin respond-only-screen-between($pMinWidth, $pMaxWidth){
+	@if $media-queries{
+		@media only screen and (min-width: $pMinWidth) and (max-width: $pMaxWidth){
+			@content;
+		}
+	}
+	@else {
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
+			@content;
+		}
+	}
+}
+// @media print equivalent
+@mixin respond-print($param-width, $max-width-flag: false) {
+	@if $media-queries {
+		@if $max-width-flag {
+			@media print and (max-width: $param-width){
+				@content;
+			}
+		}
+		@else {
+			@media print and (min-width: $param-width){
+				@content;
+			}
+		}
+	}
+	@else {
+		@if $max-width-flag{}
+		@else {
+			@if $param-width < $fixedWidthThreshold {
+				@content;
+			}
+		}
+	}
+}
+@mixin respond-print-between($pMinWidth, $pMaxWidth){
+	@if $media-queries{
+		@media print and (min-width: $pMinWidth) and (max-width: $pMaxWidth){
+			@content;
+		}
+	}
+	@else {
+		@if $pMinWidth < $fixedWidthThreshold and $pMaxWidth < $fixedWidthThreshold {
+			@content;
+		}
+	}
+}
