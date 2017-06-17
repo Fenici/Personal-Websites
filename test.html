@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="css/main.css">
+
+	<style type="text/css" media="screen">
+		
+	</style>
+</head>
+<body>
+	
+ <section id="page-skills" class="page-skills">
+        <div class="container">
+            <header class="section-header">
+                <h2 class="section-title"><span>Skills</span></h2>
+                <div class="spacer"></div>
+                <p class="section-subtitle">Talk is cheap. Show me the code. ― Linus Torvalds</p>
+            </header>
+            <div class="row">
+                <div class="col-md-2">
+                    <span class="chart" data-percent="95">
+                      <span class="percent"></span>
+                    <h3>HTML</h3>
+                    </span>
+                </div>
+                <div class="col-md-2 ">
+                    <span class="chart" data-percent="60">
+                      <span class="percent"></span>
+                    <h3>CSS</h3>
+                    </span>
+                </div>
+                <div class="col-md-2">
+                    <span class="chart" data-percent="75">
+                      <span class="percent"></span>
+                    <h3>JavaScript</h3>
+                    </span>
+                </div>
+                <div class="col-md-2">
+                    <span class="chart" data-percent="80">
+                      <span class="percent"></span>
+                    <h3>Python</h3>
+                    </span>
+                </div>
+                <div class="col-md-2">
+                    <span class="chart" data-percent="65">
+                      <span class="percent"></span>
+                    <h3>PHP</h3>
+                    </span>
+                </div>
+                <div class="col-md-2">
+                    <span class="chart" data-percent="85">
+                      <span class="percent"></span>
+                    <h3>Others</h3>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.js"></script>
+<script type="text/javascript">
+	
+	
+	$(function() {
+		$('.chart').easyPieChart({
+			easing: 'easeOutBounce',
+			onStep: function(from, to, percent) {
+				$(this.el).find('.percent').text(Math.round(percent));
+			}
+		});
+		var chart = window.chart = $('.chart').data('easyPieChart');
+		$('.js_update').on('click', function() {
+			chart.update(Math.random()*200-100);
+		});
+	});
+</script>
+</body>
+</html>
