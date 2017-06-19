@@ -3055,6 +3055,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/imgs\/profile-image.jpeg": {
+		"ft": 16384,
+		"iS": 767075,
+		"oA": 0,
+		"oAP": "\/imgs\/profile-image.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
 	"\/imgs\/web-development.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -3127,6 +3137,18 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/PacktWordPressThemeDevelopment3rdEditionMar2013ISBN1849514224.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/PacktWordPressThemeDevelopment3rdEditionMar2013ISBN1849514224.pdf",
+		"oF": 0
+		},
+	"\/resume.pdf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/resume.pdf",
+		"oF": 0
+		},
 	"\/scss\/_font.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -3196,12 +3218,6 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/test.html",
-		"oF": 0
-		},
-	"\/Yudong (Chuck) Zheng Resume v2.5.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/Yudong (Chuck) Zheng Resume v2.5.pdf",
 		"oF": 0
 		}
 	},
