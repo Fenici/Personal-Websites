@@ -3137,11 +3137,21 @@
 		"sC": 1,
 		"tS": 0
 		},
-	"\/PacktWordPressThemeDevelopment3rdEditionMar2013ISBN1849514224.pdf": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/PacktWordPressThemeDevelopment3rdEditionMar2013ISBN1849514224.pdf",
-		"oF": 0
+	"\/package-lock.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-lock-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"\/resume.pdf": {
 		"ft": 8192,
